@@ -1,8 +1,8 @@
-# YouTube Downloader
+# YouTube Audio Downloader
 
-**WARNING: this is just a test**
+**WARNING: this is just a test for personal use**
 
-This is a simple Flask application that allows you to download YouTube videos and playlists as mp3 files.
+This is a simple Flask application that allows you to download audio from YouTube videos and playlists as mp3 files.
 
 ## Install
 
