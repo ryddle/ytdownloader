@@ -10,12 +10,21 @@ import requests
 
 app = Flask(__name__)
 
+deleteFiles = False # if True delete files after download. By default dont delete files.
 
 @app.route("/", methods=["GET"])
 def index():
     error_message = request.args.get('error_message')
     if error_message==None:
-        error_message = "" 
+        error_message = ""
+    
+    if deleteFiles & os.path.exists('download'):
+        files_path = [os.path.abspath('download/'+x).replace("\\","/") for x in os.listdir("./download/")]
+        print(files_path)
+        for file in files_path:
+            if os.path.exists(file) & file.endswith(".mp3"):
+                os.remove(file)
+    
     return render_template("index.html", error_message=error_message)
 
 
