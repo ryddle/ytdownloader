@@ -1,0 +1,6 @@
+/.venv
+/.vscode
+/app.spec
+/batch
+/download
+/__pycache__
