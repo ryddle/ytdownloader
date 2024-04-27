@@ -21,6 +21,7 @@
                 {% endfor %}
             </ul>
         </div>
+        {% if errors|length > 0 %}
         <h2>Download errors</h2>
         <div>
             <strong>MP3 files that couldn't be downloaded.</strong>
@@ -30,6 +31,7 @@
                 {% endfor %}
             </ul>
         </div>
+        {% endif %}
         <div>
             <a href="{{ url_for('index') }}">Try another one!</a>
         </div>

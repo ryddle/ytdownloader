@@ -31,7 +31,7 @@ def index():
 @app.route("/", methods=["POST"])
 def index_post():
     yturls = list(map(str.strip, request.form["text"].split(',')))
-    filesObj = downloadUrls(yturls)
+    filesObj, errors = downloadUrls(yturls)
     return render_template('results.html', filesObj=filesObj)
 
 @app.route("/playlist/", methods=["POST"])
