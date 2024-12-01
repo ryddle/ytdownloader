@@ -4,3 +4,6 @@
 /batch
 /download
 /__pycache__
+/build
+/ytd/__pycache__
+/dist

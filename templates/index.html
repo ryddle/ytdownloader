@@ -27,6 +27,7 @@
                 <button type="submit" class="btn btn-success" value="DownloadUrls">Download!</button>
             </form>
         </div>
+        <br><br>
         <div>Or enter the url of the playlist you want to download: </div>
         <div>
             <form method="POST" action="{{ url_for('playlist') }}">
@@ -41,8 +42,8 @@
         </div>
         <div>{{ error_message }}</div>
     </div>
-    <dialog id="loading-dialog">
-        <div class="spinner-border text-primary" role="status">
+    <dialog id="loading-dialog" style="border-width: 0px; background-color: transparent;">
+        <div class="spinner-border text-primary" role="status" style="width: rem; height: rem;">
             <span class="sr-only">Loading...</span>
         </div>
     </dialog>
